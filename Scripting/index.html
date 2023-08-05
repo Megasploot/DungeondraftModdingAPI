@@ -9,22 +9,24 @@
       
       
       
+        <link rel="prev" href="..">
       
-        <link rel="next" href="Scripting/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../Globals/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Introduction - Dungeondraft Modding API</title>
+        <title>Scripting - Dungeondraft Modding API</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -40,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="wiki.css">
+      <link rel="stylesheet" href="../wiki.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#scripting" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +85,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Dungeondraft Modding API" class="md-header__button md-logo" aria-label="Dungeondraft Modding API" data-md-component="logo">
+    <a href=".." title="Dungeondraft Modding API" class="md-header__button md-logo" aria-label="Dungeondraft Modding API" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Scripting
             
           </span>
         </div>
@@ -173,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Dungeondraft Modding API" class="md-nav__button md-logo" aria-label="Dungeondraft Modding API" data-md-component="logo">
+    <a href=".." title="Dungeondraft Modding API" class="md-nav__button md-logo" aria-label="Dungeondraft Modding API" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -221,6 +223,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -233,12 +249,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Introduction
+          Scripting
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
-        Introduction
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Scripting
       </a>
       
         
@@ -257,65 +273,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    Structure
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scripting" class="md-nav__link">
-    Scripting
-  </a>
-  
-    <nav class="md-nav" aria-label="Scripting">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
+  <a href="#mod-load-time" class="md-nav__link">
+    Mod Load Time
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#tutorials" class="md-nav__link">
-    Tutorials
+  <a href="#minimum-viable-script" class="md-nav__link">
+    Minimum Viable Script
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
-    Development Environment
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#script-types" class="md-nav__link">
-    Script Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Script Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tool-script" class="md-nav__link">
-    Tool Script
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#export-format-script" class="md-nav__link">
-    Export Format Script
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -339,21 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Scripting/" class="md-nav__link">
-        Scripting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Globals/" class="md-nav__link">
+      <a href="../Globals/" class="md-nav__link">
         Globals
       </a>
     </li>
@@ -367,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="AssetCategories/" class="md-nav__link">
+      <a href="../AssetCategories/" class="md-nav__link">
         Asset Categories
       </a>
     </li>
@@ -418,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorials/Serializing-Mod-Data/" class="md-nav__link">
+      <a href="../tutorials/Serializing-Mod-Data/" class="md-nav__link">
         Serializing Mod Data
       </a>
     </li>
@@ -469,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/GridMenu/" class="md-nav__link">
+      <a href="../reference/GridMenu/" class="md-nav__link">
         GridMenu
       </a>
     </li>
@@ -483,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/TagsPanel/" class="md-nav__link">
+      <a href="../reference/TagsPanel/" class="md-nav__link">
         TagsPanel
       </a>
     </li>
@@ -497,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/Tool/" class="md-nav__link">
+      <a href="../reference/Tool/" class="md-nav__link">
         Tool
       </a>
     </li>
@@ -511,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="reference/ToolPanel/" class="md-nav__link">
+      <a href="../reference/ToolPanel/" class="md-nav__link">
         ToolPanel
       </a>
     </li>
@@ -540,44 +501,39 @@
                   
 
 
-<h1 id="introduction">Introduction</h1>
-<p>Modding Dungeondraft allows you to customize your software to have new tools, features, export formats, or appearances. Dungeondraft mods are compatible with version 1.1.0.0 newborn phoenix and higher.</p>
-<p>Dungeondraft mods work by talking to Dungeondraft through a language similar to Python native to the Godot Engine called GDScript. You can familiarize yourself by reading the official <a href="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html">GDScript documentation</a>.</p>
-<h2 id="structure">Structure</h2>
-<p>Every mod consists of a folder, a .ddmod file inside, and any number of .gd GDSCript files. Dungeondraft will automatically parse every .gd file inside a mod folder and call its start() function. There is no extra step needed to point to their paths. The .ddmod file exists to inform Dungeondraft's filesystem about your mod. It details your mod's name, version, author, unique id, minimum Dungeondraft version, and a description. It is written in the JSON format. The dependencies is optional and only necessary if you use scripts from other mods.
-See example:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Test Mod&quot;</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;unique_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Megasploot.TestMod&quot;</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Megasploot&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Description here&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;dd_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.1.0.0&quot;</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;Megasploot.ParentMod&quot;</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>You can also include a PNG file named preview.png with 256x320 pixels to give any potential users of your mod a quick idea of what to expect.
-You can study an update-to-date structure here: https://github.com/Megasploot/Dungeondraft/tree/master/ddmods/toolmod</p>
-<h2 id="scripting">Scripting</h2>
-<h3 id="documentation">Documentation</h3>
-<p><a href="Scripting">Scripting</a></p>
-<p><a href="Globals">Globals</a></p>
-<h3 id="tutorials">Tutorials</h3>
-<p>Serializing Mod Data](Serializing-Mod-Data)</p>
-<h3 id="development-environment">Development Environment</h3>
-<p>The recommended IDE for writing script is Visual Studio Code with the Godot Tools plugin installed. You can find the download for both here:</p>
-<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
-<p><a href="https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools">https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools</a></p>
-<p>By using this setup, you will have access to syntax highlighting and intellisense for the Godot Engine.</p>
-<h3 id="script-types">Script Types</h3>
-<p>The backbone of a Dungeondraft mod is the scripting. Dungeondraft scripts come in 2 flavors.</p>
-<h4 id="tool-script">Tool Script</h4>
-<p>Example new tool script: <a href="https://github.com/Megasploot/Dungeondraft/blob/master/ddmods/toolmod/scripts/tools/example_new_tool.gd">https://github.com/Megasploot/Dungeondraft/blob/master/ddmods/toolmod/scripts/tools/example_new_tool.gd</a></p>
-<p>Example tool extension script: <a href="https://github.com/Megasploot/Dungeondraft/blob/master/ddmods/toolmod/scripts/tools/example_extend_tool.gd">https://github.com/Megasploot/Dungeondraft/blob/master/ddmods/toolmod/scripts/tools/example_extend_tool.gd</a></p>
-<p>A tool script allows you to add a new tool onto the toolbar and extend a current tool featureset or invent completely new ones. You can add UI elements to the tool panel to the left side and also access the object or path library panels on the right.</p>
-<h4 id="export-format-script">Export Format Script</h4>
-<p>Example export format script: <a href="https://github.com/Megasploot/Dungeondraft/blob/master/ddmods/toolmod/scripts/export_formats/example_export_format.gd">https://github.com/Megasploot/Dungeondraft/blob/master/ddmods/toolmod/scripts/export_formats/example_export_format.gd</a></p>
-<p>Export format script allows you to add a new export format to the Dungeondraft export options. You can embed additional information to a PNG, JPG, or WEBP style export. Or you can extract additional information like LOS data to create your own VTT export format.</p>
+<h1 id="scripting">Scripting</h1>
+<h2 id="overview">Overview</h2>
+<p>A script file is a fully enclosed that does not require any other script or file to use. Dungeondraft will poll each script at load, but can also poll every tick or input input based on the way you configure it. From those methods, you can communicate to Dungeondraft through API calls. It is through this back-and-forth communication that Dungeondraft can be modded.</p>
+<h3 id="mod-load-time">Mod Load Time</h3>
+<p>A mod is loaded and therefore, a script is loaded just after a new map or saved map finished loading and the canvas displays. By the time a script is initialized.</p>
+<h3 id="minimum-viable-script">Minimum Viable Script</h3>
+<p>The following code is the smallest scripts for the 2 script types.</p>
+<p><strong>Tool Script</strong>
+<div class="language-gdscript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">var</span><span class="w"> </span><span class="n">script_class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;tool&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">func</span><span class="w"> </span><span class="n">start</span><span class="p">():</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">pass</span>
+</span></code></pre></div></p>
+<p>The variable <strong>script_class</strong> is a string that Dungeondraft inspects to see what type of script has been loaded.</p>
+<p>The <strong>start()</strong> method is called after an instance of the script has been created and just after all of the assets needed for drawing has been loaded. It is not called in the welcome screen before a new map has been created.</p>
+<p><strong>Export Format Script</strong>
+<div class="language-gdscript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">var</span><span class="w"> </span><span class="n">script_class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;export_format&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">var</span><span class="w"> </span><span class="n">export_format_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Export Format Name&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">var</span><span class="w"> </span><span class="n">export_file_extension</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;myexportextension&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">var</span><span class="w"> </span><span class="n">export_image_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;webp&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">var</span><span class="w"> </span><span class="n">show_quality_slider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">true</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">func</span><span class="w"> </span><span class="n">start</span><span class="p">():</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">pass</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">func</span><span class="w"> </span><span class="n">process</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">String</span><span class="p">,</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">File</span><span class="p">,</span><span class="w"> </span><span class="n">ppi</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="p">):</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">pass</span>
+</span></code></pre></div></p>
+<p>The variable <strong>export_format_name</strong> is a string that is displayed to users in the export window.</p>
+<p>The variable <strong>export_file_extension</strong> is the file extension your custom format will save with.</p>
+<p>The variable <strong>export_image_format</strong> is the type of image the export will use. Valid options are: "png", "jpg", and "webp".</p>
+<p>The variable <strong>show_quality_slider</strong> displays the quality slider in the export window, useful for png and webp.</p>
+<p>The <strong>process()</strong> method is only called within an Export Format script and is called just after the imaging step of the export process has been completed. It allows you to manipulate the end result of the image. This is an ideal script type to add specialized export to a custom VTT.</p>
 
 
 
@@ -615,10 +571,10 @@ You can study an update-to-date structure here: https://github.com/Megasploot/Du
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.path", "toc.integrate"], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.path", "toc.integrate"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
