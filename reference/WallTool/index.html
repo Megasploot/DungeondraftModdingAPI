@@ -9,17 +9,15 @@
       
       
       
-        <link rel="prev" href="../TextTool/">
+        <link rel="prev" href="../TraceImage/">
       
-      
-        <link rel="next" href="../ToolPanel/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Tool - Dungeondraft Modding API</title>
+        <title>WallTool - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tool" class="md-skip">
+        <a href="#walltool" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tool
+              WallTool
             
           </span>
         </div>
@@ -577,6 +575,48 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
+        Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ToolPanel/" class="md-nav__link">
+        ToolPanel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TraceImage/" class="md-nav__link">
+        TraceImage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -589,12 +629,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tool
+          WallTool
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tool
+        WallTool
       </a>
       
         
@@ -656,48 +696,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ToolPanel/" class="md-nav__link">
-        ToolPanel
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TraceImage/" class="md-nav__link">
-        TraceImage
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WallTool/" class="md-nav__link">
-        WallTool
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -719,24 +717,37 @@
                   
 
 
-<h1 id="tool">Tool</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="walltool">WallTool</h1>
+<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
 <h2 id="description">Description</h2>
-<p>This is an abstract class that all Dungeondraft tools are based off of. You can call or get any properties or functions from this class on all tools.</p>
+<p>The tool used to edit walls.</p>
+<p>Accessed by <code>Global.Editor.Tools["WallTool"]</code>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">Controls</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">Sorting</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">SizeControl</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> </td>
+<td><span class="property">Texture</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> </td>
-<td><span class="property">SizeButtons</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">Color</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">Shadow</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">Bevel</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">isDrawing</span> </td>
 </tr>
 </table>
 </p>
@@ -745,58 +756,101 @@
 <table>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#Confirm"><span class="method">Confirm</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#EndWall"><span class="method">EndWall</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">loop</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></td>
+<td><a href="#SetShadow"><span class="method">SetShadow</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a></td>
+<td><a href="#GetWallColor"><span class="method">GetWallColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="param">texture</span> = <span class="default">null</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetWallColor"><span class="method">SetWallColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">Controls</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">Sorting</span></span>: <br>
 <span class="desc">
-Returns a Dictionary of UI Controls with the control's registered IDs as the keys.
+Where the next wall will be sorted. Underlying type is an enum. 0 = Over, 1 = Under.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">SizeControl</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="property">Texture</span></span>: <br>
 <span class="desc">
-A Range control, typically a slider that determines the size of the brush.
+Gets or sets the next wall's texture.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="property">SizeButtons</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">Color</span></span>: <br>
 <span class="desc">
-The Buttons assigned to this Tool to modify tool brush sizes.
+Gets or sets the next wall's multiplied color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">Shadow</span></span>: <br>
+<span class="desc">
+Gets and sets whether the wall has a shadow below it.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">Bevel</span></span>: <br>
+<span class="desc">
+Gets and sets whether the next wall should have beveled corners.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">isDrawing</span></span>: <br>
+<span class="desc">
+Whether the user is actively drawing.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Enable"><span class="void">void</span> <a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Confirm"><span class="void">void</span> <a href="#Confirm"><span class="method">Confirm</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Enables the tool to perform tasks. This is also called internally when a tool is selected in the toolbar. The tool will not work without being first enabled.
+Takes the polyline from WorldUI and turns it into a Wall and adds it into the Walls children. Automagically determines if it needs to loop or add new points. Calls EndWall().
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Disable"><span class="void">void</span> <a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="EndWall"><span class="void">void</span> <a href="#EndWall"><span class="method">EndWall</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">loop</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Disables the tool. Must be called when you are done with a tool to clean up.
+Takes the polyline from WorldUI and turns it into a Wall and adds it into the Walls children. Better to call Confirm() rather than this directly.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="RegisterSizeButtons"><span class="void">void</span> <a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></span>: <br>
+<li><span id="SetShadow"><span class="void">void</span> <a href="#SetShadow"><span class="method">SetShadow</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Call from the ToolPanel to let this Tool know if there are size buttons for something like a brush.
+Set shadow option of all walls.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GetWallColor"><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <a href="#GetWallColor"><span class="method">GetWallColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="param">texture</span> = <span class="default">null</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Get the current selected wall style's color if applicable.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetWallColor"><span class="void">void</span> <a href="#SetWallColor"><span class="method">SetWallColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Set the current selected wall style's color if applicable.
 </span></li>
 </ul>
 

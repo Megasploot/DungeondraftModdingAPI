@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../TextTool/">
+        <link rel="prev" href="../Text/">
       
       
-        <link rel="next" href="../ToolPanel/">
+        <link rel="next" href="../Tool/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Tool - Dungeondraft Modding API</title>
+        <title>TextTool - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tool" class="md-skip">
+        <a href="#texttool" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tool
+              TextTool
             
           </span>
         </div>
@@ -563,20 +563,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../TextTool/" class="md-nav__link">
-        TextTool
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -589,12 +575,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tool
+          TextTool
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tool
+        TextTool
       </a>
       
         
@@ -651,6 +637,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
+        Tool
+      </a>
     </li>
   
 
@@ -719,24 +719,65 @@
                   
 
 
-<h1 id="tool">Tool</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="texttool">TextTool</h1>
+<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
 <h2 id="description">Description</h2>
-<p>This is an abstract class that all Dungeondraft tools are based off of. You can call or get any properties or functions from this class on all tools.</p>
+<p>The tool used to edit the texts.</p>
+<p>Accessed by <code>Global.Editor.Tools["TextTool"]</code>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">Controls</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">Mode</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">SizeControl</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> </td>
+<td><span class="property">FontSize</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> </td>
-<td><span class="property">SizeButtons</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">FontColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">SharpenFonts</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">TextBox</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">BoxShape</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> </td>
+<td><span class="property">BorderWidth</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">BoxBackgroundColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">BoxBorderColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> </td>
+<td><span class="property">FontOptions</span> </td>
+</tr>
+<tr>
+<td><a href="../Text"><span class="type">Text</span></a> </td>
+<td><span class="property">focus</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">isDragging</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">HasFocused</span> </td>
 </tr>
 </table>
 </p>
@@ -745,58 +786,227 @@
 <table>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#SetFocus"><span class="method">SetFocus</span></a> <span class="bracket">(</span> <a href="../Text"><span class="type">Text</span></a> <span class="param">text</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#OnModeChanged"><span class="method">OnModeChanged</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">mode</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></td>
+<td><a href="#SetFont"><span class="method">SetFont</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ChangeFontSize"><span class="method">ChangeFontSize</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ChangeColor"><span class="method">ChangeColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetSharpenFonts"><span class="method">SetSharpenFonts</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetVisible"><span class="method">SetVisible</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetTextBox"><span class="method">SetTextBox</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetBoxShape"><span class="method">SetBoxShape</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">shape</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#OnBorderWidthChanged"><span class="method">OnBorderWidthChanged</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#UpdateText"><span class="method">UpdateText</span></a> <span class="bracket">(</span> <a href="../Text"><span class="type">Text</span></a> <span class="param">text</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#Delete"><span class="method">Delete</span></a> <span class="bracket">( )</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">Controls</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">Mode</span></span>: <br>
 <span class="desc">
-Returns a Dictionary of UI Controls with the control's registered IDs as the keys.
+0 = Edit, 1 = Move. Call OnModeChange() to set.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">SizeControl</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="property">FontSize</span></span>: <br>
 <span class="desc">
-A Range control, typically a slider that determines the size of the brush.
+Changes the font size. UI state. Call ChangeFontSize() instead.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="property">SizeButtons</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">FontColor</span></span>: <br>
 <span class="desc">
-The Buttons assigned to this Tool to modify tool brush sizes.
+Changes the font color. UI state. Call ChangeColor() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">SharpenFonts</span></span>: <br>
+<span class="desc">
+Sharpens the font when zoomed in. UI state. Call SetSharpenFonts() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">TextBox</span></span>: <br>
+<span class="desc">
+Puts a box around the text labels. UI state. Call SetTextBox() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">BoxShape</span></span>: <br>
+<span class="desc">
+Changes the shape of the box when enabled. Calls SetBoxShape() internally.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="property">BorderWidth</span></span>: <br>
+<span class="desc">
+Changes the width of a box. UI state. Call OnBorderWidthChanged() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">BoxBackgroundColor</span></span>: <br>
+<span class="desc">
+Changes the background color of a box. Set before calling SetTextBox().
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">BoxBorderColor</span></span>: <br>
+<span class="desc">
+Changes the border color of a box. Set before calling SetTextBox().
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> <span class="property">FontOptions</span></span>: <br>
+<span class="desc">
+Reference to the OptionButton representing the font selection. Do not modify the reference, only change the OptionButton itself.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="../Text"><span class="type">Text</span></a> <span class="property">focus</span></span>: <br>
+<span class="desc">
+Reference to the Text in focus.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">isDragging</span></span>: <br>
+<span class="desc">
+Is the user actively dragging a text.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">HasFocused</span></span>: <br>
+<span class="desc">
+Is there a text in focus. Read only.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Enable"><span class="void">void</span> <a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="SetFocus"><span class="void">void</span> <a href="#SetFocus"><span class="method">SetFocus</span></a> <span class="bracket">(</span> <a href="../Text"><span class="type">Text</span></a> <span class="param">text</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Enables the tool to perform tasks. This is also called internally when a tool is selected in the toolbar. The tool will not work without being first enabled.
+Sets the text in focus.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Disable"><span class="void">void</span> <a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="OnModeChanged"><span class="void">void</span> <a href="#OnModeChanged"><span class="method">OnModeChanged</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">mode</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Disables the tool. Must be called when you are done with a tool to clean up.
+Changes the edit mode. 0 = Edit, 1 = Move
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="RegisterSizeButtons"><span class="void">void</span> <a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></span>: <br>
+<li><span id="SetFont"><span class="void">void</span> <a href="#SetFont"><span class="method">SetFont</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Call from the ToolPanel to let this Tool know if there are size buttons for something like a brush.
+Changes the font. The index is the value of the font in the dropdown order.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ChangeFontSize"><span class="void">void</span> <a href="#ChangeFontSize"><span class="method">ChangeFontSize</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the font size.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ChangeColor"><span class="void">void</span> <a href="#ChangeColor"><span class="method">ChangeColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the font colors. Valid entries for names are: "FontColor", "BoxBackgroundColor", and "BoxBorderColor".
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetSharpenFonts"><span class="void">void</span> <a href="#SetSharpenFonts"><span class="method">SetSharpenFonts</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes whether the font is sharpened when zoomed in.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetVisible"><span class="void">void</span> <a href="#SetVisible"><span class="method">SetVisible</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Toggles visibility of all Texts.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetTextBox"><span class="void">void</span> <a href="#SetTextBox"><span class="method">SetTextBox</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Toggles visibility of the box behind a text.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetBoxShape"><span class="void">void</span> <a href="#SetBoxShape"><span class="method">SetBoxShape</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">shape</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the shape of the text box. 0 = None, 1 = Square, 2 = Rounded.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="OnBorderWidthChanged"><span class="void">void</span> <a href="#OnBorderWidthChanged"><span class="method">OnBorderWidthChanged</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the width of the text box border.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="UpdateText"><span class="void">void</span> <a href="#UpdateText"><span class="method">UpdateText</span></a> <span class="bracket">(</span> <a href="../Text"><span class="type">Text</span></a> <span class="param">text</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Updates the <a href="../Text">Text</a> in focus to settings set in the UI controls and thus the properties.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="Delete"><span class="void">void</span> <a href="#Delete"><span class="method">Delete</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Deletes the <a href="../Text">Text</a> in focus.
 </span></li>
 </ul>
 

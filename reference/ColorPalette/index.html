@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../TextTool/">
+        <link rel="prev" href="../../tutorials/SerializingModData/">
       
       
-        <link rel="next" href="../ToolPanel/">
+        <link rel="next" href="../Environment/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Tool - Dungeondraft Modding API</title>
+        <title>ColorPalette - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tool" class="md-skip">
+        <a href="#colorpalette" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tool
+              ColorPalette
             
           </span>
         </div>
@@ -381,11 +381,87 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ColorPalette/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ColorPalette
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ColorPalette
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signals" class="md-nav__link">
+    Signals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    Property Descriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    Method Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -577,80 +653,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tool
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
         Tool
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-descriptions" class="md-nav__link">
-    Property Descriptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-descriptions" class="md-nav__link">
-    Method Descriptions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -719,24 +726,52 @@
                   
 
 
-<h1 id="tool">Tool</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="colorpalette">ColorPalette</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_hboxcontainer.html">HBoxContainer</a></p>
 <h2 id="description">Description</h2>
-<p>This is an abstract class that all Dungeondraft tools are based off of. You can call or get any properties or functions from this class on all tools.</p>
+<p>Dungeondraft unique UI Control that allows the user to set a color for the tool and create a color palette.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">Controls</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_colorrect.html"><span class="type">ColorRect</span></a> </td>
+<td><span class="property">colorRect</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">SizeControl</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_texturerect.html"><span class="type">TextureRect</span></a> </td>
+<td><span class="property">iconRect</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> </td>
-<td><span class="property">SizeButtons</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button</span></a> </td>
+<td><span class="property">paletteButton</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button</span></a> </td>
+<td><span class="property">instantButton</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_popup.html"><span class="type">Popup</span></a> </td>
+<td><span class="property">popup</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_itemlist.html"><span class="type">ItemList</span></a> </td>
+<td><span class="property">colorList</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_popup.html"><span class="type">Popup</span></a> </td>
+<td><span class="property">colorPickerPopup</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_colorpicker.html"><span class="type">ColorPicker</span></a> </td>
+<td><span class="property">colorPicker</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_popupmenu.html"><span class="type">PopupMenu</span></a> </td>
+<td><span class="property">menu</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">color</span> </td>
 </tr>
 </table>
 </p>
@@ -744,59 +779,148 @@
 <p>
 <table>
 <tr>
-<td><span class="void">void</span></td>
-<td><a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String[]</span></a></td>
+<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String[]</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></td>
+<td><a href="#SetColor"><span class="method">SetColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">emitSignal</span> = <span class="default">true</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#AddPresets"><span class="method">AddPresets</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String[]</span></a> <span class="param">hexcodes</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ShowPalette"><span class="method">ShowPalette</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ShowPicker"><span class="method">ShowPicker</span></a> <span class="bracket">( )</span></td>
 </tr>
 </table>
 </p>
+<h2 id="signals">Signals</h2>
+<ul>
+<li><span id="color_changed"><a href="#color_changed"><span class="signal">color_changed</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Signal emitted when the color is changed. Returns a Color. Not used but is emitted.
+</span></li>
+</ul>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">Controls</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_colorrect.html"><span class="type">ColorRect</span></a> <span class="property">colorRect</span></span>: <br>
 <span class="desc">
-Returns a Dictionary of UI Controls with the control's registered IDs as the keys.
+The box that shows the selected color to the user.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">SizeControl</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_texturerect.html"><span class="type">TextureRect</span></a> <span class="property">iconRect</span></span>: <br>
 <span class="desc">
-A Range control, typically a slider that determines the size of the brush.
+The dropdown arrow icon. Does not affect use.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="property">SizeButtons</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button</span></a> <span class="property">paletteButton</span></span>: <br>
 <span class="desc">
-The Buttons assigned to this Tool to modify tool brush sizes.
+The button the user presses to show the palette.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button</span></a> <span class="property">instantButton</span></span>: <br>
+<span class="desc">
+The button the user presses to open the color picker.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_popup.html"><span class="type">Popup</span></a> <span class="property">popup</span></span>: <br>
+<span class="desc">
+The popup where the presets are displayed.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_itemlist.html"><span class="type">ItemList</span></a> <span class="property">colorList</span></span>: <br>
+<span class="desc">
+The ItemList that holds the individual preset colors.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_popup.html"><span class="type">Popup</span></a> <span class="property">colorPickerPopup</span></span>: <br>
+<span class="desc">
+The color picker popup.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_colorpicker.html"><span class="type">ColorPicker</span></a> <span class="property">colorPicker</span></span>: <br>
+<span class="desc">
+Godot ColorPicker used by this Control to add new colors.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_popupmenu.html"><span class="type">PopupMenu</span></a> <span class="property">menu</span></span>: <br>
+<span class="desc">
+The right-click context menu where the user can remove a color preset.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">color</span></span>: <br>
+<span class="desc">
+Color currently selected. Use SetColor() to change color. ONLY SAFE TO READ.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Enable"><span class="void">void</span> <a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String[]</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Enables the tool to perform tasks. This is also called internally when a tool is selected in the toolbar. The tool will not work without being first enabled.
+Saves and returns the presets as an Array of hexcodes.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Disable"><span class="void">void</span> <a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String[]</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Disables the tool. Must be called when you are done with a tool to clean up.
+Loads the presets from an Array of hexcodes. Calls AddPresets() internally.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="RegisterSizeButtons"><span class="void">void</span> <a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></span>: <br>
+<li><span id="SetColor"><span class="void">void</span> <a href="#SetColor"><span class="method">SetColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">emitSignal</span> = <span class="default">true</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Call from the ToolPanel to let this Tool know if there are size buttons for something like a brush.
+Force the ColorPalette to set a specific color. If emitSignal is set, it emits the color_changed signal.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="AddPresets"><span class="void">void</span> <a href="#AddPresets"><span class="method">AddPresets</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String[]</span></a> <span class="param">hexcodes</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Takes an Array of hexcodes and adds them as colors to the color palette.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ShowPalette"><span class="void">void</span> <a href="#ShowPalette"><span class="method">ShowPalette</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Show the color palette selector
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ShowPicker"><span class="void">void</span> <a href="#ShowPicker"><span class="method">ShowPicker</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Show the color picker
 </span></li>
 </ul>
 

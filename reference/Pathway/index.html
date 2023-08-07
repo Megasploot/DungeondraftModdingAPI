@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../ScatterTool/">
+        <link rel="prev" href="../PathTool/">
       
       
-        <link rel="next" href="../Text/">
+        <link rel="next" href="../PrefabTool/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>TagsPanel - Dungeondraft Modding API</title>
+        <title>Pathway - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tagspanel" class="md-skip">
+        <a href="#pathway" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TagsPanel
+              Pathway
             
           </span>
         </div>
@@ -465,11 +465,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Pathway/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Pathway
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Pathway
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    Property Descriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    Method Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -535,80 +604,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TagsPanel
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../TagsPanel/" class="md-nav__link">
         TagsPanel
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-descriptions" class="md-nav__link">
-    Property Descriptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-descriptions" class="md-nav__link">
-    Method Descriptions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -719,32 +719,56 @@
                   
 
 
-<h1 id="tagspanel">TagsPanel</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_vboxcontainer.html">VBoxContainer</a></p>
+<h1 id="pathway">Pathway</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_line2d.html">Line2D</a></p>
 <h2 id="description">Description</h2>
-<p>This is the special box that shows tags in the default Object Tool</p>
+<p>A Pathway is a Dungeondraft asset instance of what the user sees as an path from the <a href="../PathTool">PathTool</a>. See <a href="./../AssetInstance">Asset Instance</a>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> </td>
-<td><span class="property">setList</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> </td>
+<td><span class="property">Smoothness</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_itemlist.html"><span class="type">ItemList</span></a> </td>
-<td><span class="property">tagsList</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> </td>
+<td><span class="property">GlobalRect</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">tagIndexLookup</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> </td>
+<td><span class="property">EditPoints</span> </td>
 </tr>
 <tr>
-<td><span class="var">???</span> </td>
-<td><span class="property">ObjectTool</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> </td>
+<td><span class="property">GlobalEditPoints</span> </td>
 </tr>
 <tr>
 <td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
-<td><span class="property">TagsEnabled</span> </td>
+<td><span class="property">FadeIn</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">FadeOut</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">Grow</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">Shrink</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">BlockLight</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_lightoccluder2d.html"><span class="type">LightOccluder2D</span></a> </td>
+<td><span class="property">occluder</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_occluderpolygon2d.html"><span class="type">OccluderPolygon2D</span></a> </td>
+<td><span class="property">occluderPolygon</span> </td>
 </tr>
 </table>
 </p>
@@ -752,12 +776,8 @@
 <p>
 <table>
 <tr>
-<td><span class="void">void</span></td>
-<td><a href="#UpdateTags"><span class="method">UpdateTags</span></a> <span class="bracket">( )</span></td>
-</tr>
-<tr>
 <td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a></td>
-<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">( )</span></td>
+<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
@@ -765,104 +785,216 @@
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#EnableTags"><span class="method">EnableTags</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">enable</span> <span class="bracket">)</span></td>
+<td><a href="#UpdateGradient"><span class="method">UpdateGradient</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#SelectTagSetById"><span class="method">SelectTagSetById</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">id</span> <span class="bracket">)</span></td>
+<td><a href="#UpdateOccluder"><span class="method">UpdateOccluder</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#SelectTagSet"><span class="method">SelectTagSet</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">set</span> <span class="bracket">)</span></td>
+<td><a href="#SetBlockLight"><span class="method">SetBlockLight</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#ShowCurrentTagSet"><span class="method">ShowCurrentTagSet</span></a> <span class="bracket">( )</span></td>
+<td><a href="#SetEditPoints"><span class="method">SetEditPoints</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">points</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#InsertPoint"><span class="method">InsertPoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">point</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#DeletePoint"><span class="method">DeletePoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ModifyPoint"><span class="method">ModifyPoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">point</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#Smooth"><span class="method">Smooth</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#GrowShrinkEnds"><span class="method">GrowShrinkEnds</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">distance</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetWidthScale"><span class="method">SetWidthScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">widthScale</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a></td>
+<td><a href="#IsMouseWithin"><span class="method">IsMouseWithin</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">mousePos</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> <span class="property">setList</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="property">Smoothness</span></span>: <br>
 <span class="desc">
-Dropdown menu that displays the tag sets for the user to choose.
+Gets or sets the path's smoothness. Call Smooth() if subsequent methods you use to do update the Pathway.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_itemlist.html"><span class="type">ItemList</span></a> <span class="property">tagsList</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> <span class="property">GlobalRect</span></span>: <br>
 <span class="desc">
-The box where the user clicks to select tags. Can multi-select.
+The global Rect2 that encloses this path. READ ONLY.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">tagIndexLookup</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="property">EditPoints</span></span>: <br>
 <span class="desc">
-Dictionary that allows you to look up a tag's index. tagIndexLookup[tag] results in a int.
+The edit points of the path in local space. Not normally set here. Call SetEditPoints() instead.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><span class="property">ObjectTool</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="property">GlobalEditPoints</span></span>: <br>
 <span class="desc">
-A private reference to the ObjectTool that shouldn't be used in a mod.
+The edit points of the path in world space. READ ONLY.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">TagsEnabled</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">FadeIn</span></span>: <br>
 <span class="desc">
-Is this TagsPanel visually enabled.
+Gets or sets the path fade in. Not normally set here. Better to call SetFadeIn() from the PathTool.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">FadeOut</span></span>: <br>
+<span class="desc">
+Gets or sets the path fade out. Not normally set here. Better to call SetFadeOut() from the PathTool.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">Grow</span></span>: <br>
+<span class="desc">
+Gets or sets the path taper. Not normally set here. Better to call SetTransitionIn()/SetTransitionOut() from the PathTool.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">Shrink</span></span>: <br>
+<span class="desc">
+Gets or sets the path taper. Not normally set here. Better to call SetTransitionIn()/SetTransitionOut()  from the PathTool.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">BlockLight</span></span>: <br>
+<span class="desc">
+Gets the flag that indicates if this object blocks light.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_lightoccluder2d.html"><span class="type">LightOccluder2D</span></a> <span class="property">occluder</span></span>: <br>
+<span class="desc">
+The object that blocks light.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_occluderpolygon2d.html"><span class="type">OccluderPolygon2D</span></a> <span class="property">occluderPolygon</span></span>: <br>
+<span class="desc">
+The special shape that the occluder uses to block light with.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="UpdateTags"><span class="void">void</span> <a href="#UpdateTags"><span class="method">UpdateTags</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Refresh the tags available by looking up Master.TagSets.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">( )</span></span>: <br>
-<span class="desc">
-Serialize the selected tags into a Dictionary. Looks like JSON.
+Save the Pathway into the save file format and return it as a Dictionary. The param copy is only used by copy-pasting feature of Dungeondraft.
 </span></li>
 </ul>
 <hr />
 <ul>
 <li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Load a previous user's selected tags by passing in a Dictionary. See Save().
+Load a saved Pathway data. Used by a saved map file to load existing paths.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="EnableTags"><span class="void">void</span> <a href="#EnableTags"><span class="method">EnableTags</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">enable</span> <span class="bracket">)</span></span>: <br>
+<li><span id="UpdateGradient"><span class="void">void</span> <a href="#UpdateGradient"><span class="method">UpdateGradient</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Enable this TagsPanel so it can be used. When a user clicks on the tags, it calls this method as well.
+Update the path visuals to reflect changes in fade in and fade out changes.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="SelectTagSetById"><span class="void">void</span> <a href="#SelectTagSetById"><span class="method">SelectTagSetById</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">id</span> <span class="bracket">)</span></span>: <br>
+<li><span id="UpdateOccluder"><span class="void">void</span> <a href="#UpdateOccluder"><span class="method">UpdateOccluder</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Manually selects the tag set by id in the dropdown and display the corresponding objects in the Object Library Panel.
+Automatically called to update the light blocker to user point position changes.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="SelectTagSet"><span class="void">void</span> <a href="#SelectTagSet"><span class="method">SelectTagSet</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">set</span> <span class="bracket">)</span></span>: <br>
+<li><span id="SetBlockLight"><span class="void">void</span> <a href="#SetBlockLight"><span class="method">SetBlockLight</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Manually selects the tag set by String in the dropdown and display the corresponding objects in the Object Library Panel.
+Toggle whether this Pathway blocks lights.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="ShowCurrentTagSet"><span class="void">void</span> <a href="#ShowCurrentTagSet"><span class="method">ShowCurrentTagSet</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="SetEditPoints"><span class="void">void</span> <a href="#SetEditPoints"><span class="method">SetEditPoints</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">points</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Display the assets associated with this tag in the Object Library Panel.
+Set or replace the entire set of edit points in world space.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="InsertPoint"><span class="void">void</span> <a href="#InsertPoint"><span class="method">InsertPoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">point</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Insert edit point in world space at index.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="DeletePoint"><span class="void">void</span> <a href="#DeletePoint"><span class="method">DeletePoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Remove edit point at index.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ModifyPoint"><span class="void">void</span> <a href="#ModifyPoint"><span class="method">ModifyPoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">point</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Modify the position of an existing point in world space.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="Smooth"><span class="void">void</span> <a href="#Smooth"><span class="method">Smooth</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Take the Edit Points and generate a smooth visual. Called to update the visuals when the path is modified.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GrowShrinkEnds"><span class="void">void</span> <a href="#GrowShrinkEnds"><span class="method">GrowShrinkEnds</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">distance</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Called by Smooth() to taper the ends when grow or shrink is set. Not normally called directly.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetWidthScale"><span class="void">void</span> <a href="#SetWidthScale"><span class="method">SetWidthScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">widthScale</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Modifies the width of the path.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="IsMouseWithin"><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <a href="#IsMouseWithin"><span class="method">IsMouseWithin</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">mousePos</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Checks if the mouse cursor is over the path. Only used by the SelectTool.
 </span></li>
 </ul>
 

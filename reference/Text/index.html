@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../TextTool/">
+        <link rel="prev" href="../TagsPanel/">
       
       
-        <link rel="next" href="../ToolPanel/">
+        <link rel="next" href="../TextTool/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Tool - Dungeondraft Modding API</title>
+        <title>Text - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tool" class="md-skip">
+        <a href="#text" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tool
+              Text
             
           </span>
         </div>
@@ -549,34 +549,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../Text/" class="md-nav__link">
-        Text
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TextTool/" class="md-nav__link">
-        TextTool
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -589,12 +561,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tool
+          Text
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tool
+        Text
       </a>
       
         
@@ -651,6 +623,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TextTool/" class="md-nav__link">
+        TextTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
+        Tool
+      </a>
     </li>
   
 
@@ -719,24 +719,40 @@
                   
 
 
-<h1 id="tool">Tool</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="text">Text</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_lineedit.html">LineEdit</a></p>
 <h2 id="description">Description</h2>
-<p>This is an abstract class that all Dungeondraft tools are based off of. You can call or get any properties or functions from this class on all tools.</p>
+<p>A Text is a Dungeondraft asset instance of what the user sees as an text from the <a href="../TextTool">TextTool</a>. See <a href="./../AssetInstance">Asset Instance</a>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">boxShape</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> </td>
+<td><span class="property">fontName</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">fontSize</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">fontColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">borderWidth</span> </td>
+</tr>
+<tr>
 <td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">Controls</span> </td>
+<td><span class="property">dataOnFocus</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">SizeControl</span> </td>
-</tr>
-<tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> </td>
-<td><span class="property">SizeButtons</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">QueueNewHistoryRecord</span> </td>
 </tr>
 </table>
 </p>
@@ -744,59 +760,186 @@
 <p>
 <table>
 <tr>
-<td><span class="void">void</span></td>
-<td><a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a></td>
+<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></td>
+<td><a href="#Replace"><span class="method">Replace</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a></td>
+<td><a href="#IsMouseWithin"><span class="method">IsMouseWithin</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetFont"><span class="method">SetFont</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">size</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetFontSize"><span class="method">SetFontSize</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">size</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetFontColor"><span class="method">SetFontColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#EnableTextBox"><span class="method">EnableTextBox</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">borderWidth</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">bgColor</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">borderColor</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">shape</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#DisableTextBox"><span class="method">DisableTextBox</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetBoxShape"><span class="method">SetBoxShape</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">shape</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetBorderWidth"><span class="method">SetBorderWidth</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">width</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#HandleExport"><span class="method">HandleExport</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">exporting</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">Controls</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">boxShape</span></span>: <br>
 <span class="desc">
-Returns a Dictionary of UI Controls with the control's registered IDs as the keys.
+Not set manually. 0 = None, 1 = Square, 2 = Rounded.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">SizeControl</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="property">fontName</span></span>: <br>
 <span class="desc">
-A Range control, typically a slider that determines the size of the brush.
+Not set manually.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="property">SizeButtons</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">fontSize</span></span>: <br>
 <span class="desc">
-The Buttons assigned to this Tool to modify tool brush sizes.
+Not set manually.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">fontColor</span></span>: <br>
+<span class="desc">
+Not set manually.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">borderWidth</span></span>: <br>
+<span class="desc">
+Not set manually.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">dataOnFocus</span></span>: <br>
+<span class="desc">
+The saved data when this Text is in focus in case an Undo record needs to be recorded.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">QueueNewHistoryRecord</span></span>: <br>
+<span class="desc">
+Tells Dungeondraft to record the Undo History of any changes when the focused text leaves focus.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Enable"><span class="void">void</span> <a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Enables the tool to perform tasks. This is also called internally when a tool is selected in the toolbar. The tool will not work without being first enabled.
+Save the Text into the save file format and return it as a Dictionary. The param copy is only used by copy-pasting feature of Dungeondraft.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Disable"><span class="void">void</span> <a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Disables the tool. Must be called when you are done with a tool to clean up.
+Load a saved Text data. Used by a saved map file to load existing texts.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="RegisterSizeButtons"><span class="void">void</span> <a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></span>: <br>
+<li><span id="Replace"><span class="void">void</span> <a href="#Replace"><span class="method">Replace</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Call from the ToolPanel to let this Tool know if there are size buttons for something like a brush.
+Replace an existing text with saved data. Used by Undo History.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="IsMouseWithin"><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <a href="#IsMouseWithin"><span class="method">IsMouseWithin</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Checks if the mouse cursor is over the Text. Only used by the SelectTool.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetFont"><span class="void">void</span> <a href="#SetFont"><span class="method">SetFont</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">size</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Change the font and its size.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetFontSize"><span class="void">void</span> <a href="#SetFontSize"><span class="method">SetFontSize</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">size</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the font size.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetFontColor"><span class="void">void</span> <a href="#SetFontColor"><span class="method">SetFontColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Change the font color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="EnableTextBox"><span class="void">void</span> <a href="#EnableTextBox"><span class="method">EnableTextBox</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">borderWidth</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">bgColor</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">borderColor</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">shape</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Enable and set options of a text box.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="DisableTextBox"><span class="void">void</span> <a href="#DisableTextBox"><span class="method">DisableTextBox</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Hide the text box.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetBoxShape"><span class="void">void</span> <a href="#SetBoxShape"><span class="method">SetBoxShape</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">shape</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the shape of the text box. 0 = None, 1 = Square, 2 = Rounded.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetBorderWidth"><span class="void">void</span> <a href="#SetBorderWidth"><span class="method">SetBorderWidth</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">width</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Changes the width of the text box border.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="HandleExport"><span class="void">void</span> <a href="#HandleExport"><span class="method">HandleExport</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">exporting</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Called during the export process so the font sizing would be accurate. Not needed to be manually called.
 </span></li>
 </ul>
 

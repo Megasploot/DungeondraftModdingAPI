@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../TextTool/">
+        <link rel="prev" href="../ObjectTool/">
       
       
-        <link rel="next" href="../ToolPanel/">
+        <link rel="next" href="../Pathway/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Tool - Dungeondraft Modding API</title>
+        <title>PathTool - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tool" class="md-skip">
+        <a href="#pathtool" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tool
+              PathTool
             
           </span>
         </div>
@@ -451,11 +451,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../PathTool/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PathTool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         PathTool
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    Property Descriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    Method Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -577,80 +646,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tool
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
         Tool
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-descriptions" class="md-nav__link">
-    Property Descriptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-descriptions" class="md-nav__link">
-    Method Descriptions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -719,24 +719,69 @@
                   
 
 
-<h1 id="tool">Tool</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="pathtool">PathTool</h1>
+<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
 <h2 id="description">Description</h2>
-<p>This is an abstract class that all Dungeondraft tools are based off of. You can call or get any properties or functions from this class on all tools.</p>
+<p>The tool used to edit paths.</p>
+<p>Accessed by <code>Global.Editor.Tools["PathTool"]</code>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">Sorting</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> </td>
+<td><span class="property">Smoothness</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">fadeIn</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">fadeOut</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">grow</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">shrink</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> </td>
+<td><span class="property">Texture</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> </td>
+<td><span class="property">LayerMenu</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">ActiveLayer</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> </td>
+<td><span class="property">Width</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">isDrawing</span> </td>
+</tr>
+<tr>
+<td><a href="../Pathway"><span class="type">Pathway</span></a> </td>
+<td><span class="property">ActivePath</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">BlockLight</span> </td>
+</tr>
+<tr>
 <td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">Controls</span> </td>
-</tr>
-<tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">SizeControl</span> </td>
-</tr>
-<tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> </td>
-<td><span class="property">SizeButtons</span> </td>
+<td><span class="property">LibraryMemory</span> </td>
 </tr>
 </table>
 </p>
@@ -745,58 +790,223 @@
 <table>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#SetLayer"><span class="method">SetLayer</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#StartPath"><span class="method">StartPath</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></td>
+<td><a href="#UpdatePath"><span class="method">UpdatePath</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#Confirm"><span class="method">Confirm</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#EndPath"><span class="method">EndPath</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">loop</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetSorting"><span class="method">SetSorting</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sorting</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetFadeIn"><span class="method">SetFadeIn</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetFadeOut"><span class="method">SetFadeOut</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetTransitionIn"><span class="method">SetTransitionIn</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetTransitionOut"><span class="method">SetTransitionOut</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetBlockLight"><span class="method">SetBlockLight</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">Controls</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">Sorting</span></span>: <br>
 <span class="desc">
-Returns a Dictionary of UI Controls with the control's registered IDs as the keys.
+Where the next path will be sorted. Underlying type is an enum. 0 = Over, 1 = Under. Read only. Set with SetSorting() instead.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">SizeControl</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="property">Smoothness</span></span>: <br>
 <span class="desc">
-A Range control, typically a slider that determines the size of the brush.
+Gets or sets the next path's smoothness. 0 to 1.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="property">SizeButtons</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">fadeIn</span></span>: <br>
 <span class="desc">
-The Buttons assigned to this Tool to modify tool brush sizes.
+Gets or sets the next path's fade in. Better to use SetFadeIn() to set.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">fadeOut</span></span>: <br>
+<span class="desc">
+Gets or sets the next path's fade in. Better to use SetFadeOut() to set.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">grow</span></span>: <br>
+<span class="desc">
+Gets or sets the next path's fade in. Better to use SetTransitionIn()/SetTransitionOut() to set.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">shrink</span></span>: <br>
+<span class="desc">
+Gets or sets the next path's fade in. Better to use SetTransitionIn()/SetTransitionOut() to set.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="property">Texture</span></span>: <br>
+<span class="desc">
+Gets and sets the texture used for the next path drawn.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> <span class="property">LayerMenu</span></span>: <br>
+<span class="desc">
+The reference to the layer menu in the Path Tool when it is active.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">ActiveLayer</span></span>: <br>
+<span class="desc">
+Gets and sets whether the tool's layer.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="property">Width</span></span>: <br>
+<span class="desc">
+Gets and sets the width used for the next path drawn.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">isDrawing</span></span>: <br>
+<span class="desc">
+Whether the user is actively drawing.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="../Pathway"><span class="type">Pathway</span></a> <span class="property">ActivePath</span></span>: <br>
+<span class="desc">
+Gets the current unfinished Pathway (path).
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">BlockLight</span></span>: <br>
+<span class="desc">
+Allows the user to adjust blocking light.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">LibraryMemory</span></span>: <br>
+<span class="desc">
+The data that represents the last loaded state of the library panel.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Enable"><span class="void">void</span> <a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="SetLayer"><span class="void">void</span> <a href="#SetLayer"><span class="method">SetLayer</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Enables the tool to perform tasks. This is also called internally when a tool is selected in the toolbar. The tool will not work without being first enabled.
+Set layer option and update the active link:Pathway` to reflect it.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Disable"><span class="void">void</span> <a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="StartPath"><span class="void">void</span> <a href="#StartPath"><span class="method">StartPath</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Disables the tool. Must be called when you are done with a tool to clean up.
+Create a new path with zero points and sets it as the ActivePath.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="RegisterSizeButtons"><span class="void">void</span> <a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></span>: <br>
+<li><span id="UpdatePath"><span class="void">void</span> <a href="#UpdatePath"><span class="method">UpdatePath</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Call from the ToolPanel to let this Tool know if there are size buttons for something like a brush.
+Updates the visuals of the current unfinished path.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="Confirm"><span class="void">void</span> <a href="#Confirm"><span class="method">Confirm</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Finishes any path started and closes loops if possible. Calls EndPath() internally.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="EndPath"><span class="void">void</span> <a href="#EndPath"><span class="method">EndPath</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">loop</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Called by Confirm(). Better to not call directly.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetSorting"><span class="void">void</span> <a href="#SetSorting"><span class="method">SetSorting</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sorting</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the sorting of the tool, and updates the preview <a href="../Prop">Prop</a> to reflect it. 0 = Over, 1 = Under.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetFadeIn"><span class="void">void</span> <a href="#SetFadeIn"><span class="method">SetFadeIn</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Marks future paths to fade in.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetFadeOut"><span class="void">void</span> <a href="#SetFadeOut"><span class="method">SetFadeOut</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Marks future paths to fade out.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetTransitionIn"><span class="void">void</span> <a href="#SetTransitionIn"><span class="method">SetTransitionIn</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the type of transition for the fade. 0 is disable, 1 is fade in, 2 is grow/shrink.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetTransitionOut"><span class="void">void</span> <a href="#SetTransitionOut"><span class="method">SetTransitionOut</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the type of transition for the fade. 0 is disable, 1 is fade in, 2 is grow/shrink.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetBlockLight"><span class="void">void</span> <a href="#SetBlockLight"><span class="method">SetBlockLight</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Updates whether the current unfinished path should block light.
 </span></li>
 </ul>
 

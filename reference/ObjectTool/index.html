@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../TextTool/">
+        <link rel="prev" href="../LightTool/">
       
       
-        <link rel="next" href="../ToolPanel/">
+        <link rel="next" href="../PathTool/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Tool - Dungeondraft Modding API</title>
+        <title>ObjectTool - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tool" class="md-skip">
+        <a href="#objecttool" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tool
+              ObjectTool
             
           </span>
         </div>
@@ -437,11 +437,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ObjectTool/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ObjectTool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ObjectTool
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    Property Descriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    Method Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -577,80 +646,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tool
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
         Tool
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-descriptions" class="md-nav__link">
-    Property Descriptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-descriptions" class="md-nav__link">
-    Method Descriptions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -719,24 +719,57 @@
                   
 
 
-<h1 id="tool">Tool</h1>
-<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="objecttool">ObjectTool</h1>
+<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
 <h2 id="description">Description</h2>
-<p>This is an abstract class that all Dungeondraft tools are based off of. You can call or get any properties or functions from this class on all tools.</p>
+<p>The tool used to edit objects.</p>
+<p>Accessed by <code>Global.Editor.Tools["ObjectTool"]</code>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
-<td><span class="property">Controls</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> </td>
+<td><span class="property">texture</span> </td>
+</tr>
+<tr>
+<td><a href="../Prop"><span class="type">Prop</span></a> </td>
+<td><span class="property">Preview</span> </td>
 </tr>
 <tr>
 <td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">SizeControl</span> </td>
+<td><span class="property">Rotation</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> </td>
-<td><span class="property">SizeButtons</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
+<td><span class="property">Scale</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> </td>
+<td><span class="property">LayerMenu</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">ActiveLayer</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">Sorting</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">Shadow</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">BlockLight</span> </td>
+</tr>
+<tr>
+<td><a href="../GridMenu"><span class="type">GridMenu</span></a> </td>
+<td><span class="property">GridMenu</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
+<td><span class="property">LibraryMemory</span> </td>
 </tr>
 </table>
 </p>
@@ -745,58 +778,191 @@
 <table>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#Record"><span class="method">Record</span></a> <span class="bracket">(</span> <a href="../Prop"><span class="type">Prop</span></a> <span class="param">obj</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></td>
+<td><a href="#Next"><span class="method">Next</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></td>
+<td><a href="#SetLayer"><span class="method">SetLayer</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetShadow"><span class="method">SetShadow</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ChangeColor"><span class="method">ChangeColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#Confirm"><span class="method">Confirm</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#PromoteCustomColor"><span class="method">PromoteCustomColor</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetSorting"><span class="method">SetSorting</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sorting</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#EmbebObject"><span class="method">EmbebObject</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">file</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetBlockLight"><span class="method">SetBlockLight</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">Controls</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="property">texture</span></span>: <br>
 <span class="desc">
-Returns a Dictionary of UI Controls with the control's registered IDs as the keys.
+<a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html">Texture</a> of the asset selected. Used automatically by the UI controls. Does not update the preview link:<code>Prop</code> automatically.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">SizeControl</span></span>: <br>
+<li><span><a href="../Prop"><span class="type">Prop</span></a> <span class="property">Preview</span></span>: <br>
 <span class="desc">
-A Range control, typically a slider that determines the size of the brush.
+Gets the preview Prop. This is the object that follows the user's cursor before it is actually placed. Call confirm to force it to place.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="property">SizeButtons</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Rotation</span></span>: <br>
 <span class="desc">
-The Buttons assigned to this Tool to modify tool brush sizes.
+<a href="https://docs.godotengine.org/en/3.4/classes/class_range.html">Range</a> that determines the rotation in degrees of the objects placed.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Scale</span></span>: <br>
+<span class="desc">
+<a href="https://docs.godotengine.org/en/3.4/classes/class_range.html">Range</a> that determines the scale of the objects placed.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_optionbutton.html"><span class="type">OptionButton</span></a> <span class="property">LayerMenu</span></span>: <br>
+<span class="desc">
+The reference to the layer menu in the Object Tool when it is active.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">ActiveLayer</span></span>: <br>
+<span class="desc">
+The layer the next object will be placed. Read only. Set with SetLayer() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">Sorting</span></span>: <br>
+<span class="desc">
+Where the next object will be sorted. Underlying type is an enum. 0 = Over, 1 = Under. Read only. Set with SetSorting() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">Shadow</span></span>: <br>
+<span class="desc">
+Gets and sets whether the tool will place objects with shadows. Read only. Set with SetShadow() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">BlockLight</span></span>: <br>
+<span class="desc">
+Gets and sets whether the tool will place objects that block light. Read only. Set with SetBlockLight() instead.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="../GridMenu"><span class="type">GridMenu</span></a> <span class="property">GridMenu</span></span>: <br>
+<span class="desc">
+The menu in the Object Library Panel that selects textures for this tool. DO NOT MODIFY.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">LibraryMemory</span></span>: <br>
+<span class="desc">
+The data that represents the last loaded state of the library panel.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Enable"><span class="void">void</span> <a href="#Enable"><span class="method">Enable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Record"><span class="void">void</span> <a href="#Record"><span class="method">Record</span></a> <span class="bracket">(</span> <a href="../Prop"><span class="type">Prop</span></a> <span class="param">obj</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Enables the tool to perform tasks. This is also called internally when a tool is selected in the toolbar. The tool will not work without being first enabled.
+Change this link:<code>Prop</code> from preview to real, assign it an NodeID, and then record the action to undo history.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Disable"><span class="void">void</span> <a href="#Disable"><span class="method">Disable</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="Next"><span class="void">void</span> <a href="#Next"><span class="method">Next</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Disables the tool. Must be called when you are done with a tool to clean up.
+Create a new preview link:<code>Prop</code> using the last known options and texture selected.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="RegisterSizeButtons"><span class="void">void</span> <a href="#RegisterSizeButtons"><span class="method">RegisterSizeButtons</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button[]</span></a> <span class="param">buttons</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">default</span> <span class="bracket">)</span></span>: <br>
+<li><span id="SetLayer"><span class="void">void</span> <a href="#SetLayer"><span class="method">SetLayer</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">index</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Call from the ToolPanel to let this Tool know if there are size buttons for something like a brush.
+Set layer option and update the preview link:<code>Prop</code> to reflect it.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetShadow"><span class="void">void</span> <a href="#SetShadow"><span class="method">SetShadow</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Set shadow option and update the preview link:<code>Prop</code> to reflect it.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ChangeColor"><span class="void">void</span> <a href="#ChangeColor"><span class="method">ChangeColor</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Change the custom color if it applies. Update the Object Library Panel icons to reflect it as well if enabled.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="Confirm"><span class="void">void</span> <a href="#Confirm"><span class="method">Confirm</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Finalize the preview into the map and create a new preview Prop. Calls Record() and Next() internally.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="PromoteCustomColor"><span class="void">void</span> <a href="#PromoteCustomColor"><span class="method">PromoteCustomColor</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Update the preview <a href="../Prop">Prop</a> to reflect the custom color. Better to call ChangeColor() than this function directly.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetSorting"><span class="void">void</span> <a href="#SetSorting"><span class="method">SetSorting</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sorting</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the sorting of the tool, and updates the preview <a href="../Prop">Prop</a> to reflect it. 0 = Over, 1 = Under.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="EmbebObject"><span class="void">void</span> <a href="#EmbebObject"><span class="method">EmbebObject</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">file</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Embed a PNG file directly into the map. Bloats the file size, use wisely.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetBlockLight"><span class="void">void</span> <a href="#SetBlockLight"><span class="method">SetBlockLight</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Set the preview <a href="../Prop">Prop</a> to block light.
 </span></li>
 </ul>
 
