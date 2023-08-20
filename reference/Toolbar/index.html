@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Toolset/">
+        <link rel="prev" href="../ToolPanel/">
       
       
-        <link rel="next" href="../UISegment/">
+        <link rel="next" href="../Toolset/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>TraceImage - Dungeondraft Modding API</title>
+        <title>Toolbar - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traceimage" class="md-skip">
+        <a href="#toolbar" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TraceImage
+              Toolbar
             
           </span>
         </div>
@@ -1179,34 +1179,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../Toolbar/" class="md-nav__link">
-        Toolbar
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Toolset/" class="md-nav__link">
-        Toolset
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -1219,12 +1191,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          TraceImage
+          Toolbar
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        TraceImage
+        Toolbar
       </a>
       
         
@@ -1281,6 +1253,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Toolset/" class="md-nav__link">
+        Toolset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TraceImage/" class="md-nav__link">
+        TraceImage
+      </a>
     </li>
   
 
@@ -1447,25 +1447,32 @@
                   
 
 
-<h1 id="traceimage">TraceImage</h1>
-<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="toolbar">Toolbar</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_vboxcontainer.html">VBoxContainer</a></p>
 <h2 id="description">Description</h2>
-<p>The tool used to edit the trace image.</p>
-<p>Accessed by <code>Global.Editor.Tools["TraceImage"]</code>.</p>
+<p>This is wrapper class to the category bar of a set of tools on the left side of the UI.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">Scale</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> </td>
+<td><span class="property">Title</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">Opacity</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> </td>
+<td><span class="property">ForceTool</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
-<td><span class="property">isDragging</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_label.html"><span class="type">Label</span></a> </td>
+<td><span class="property">title</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button</span></a> </td>
+<td><span class="property">backButton</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
+<td><span class="property">panels</span> </td>
 </tr>
 </table>
 </p>
@@ -1473,103 +1480,73 @@
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a></td>
-<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></td>
+<td><span class="void">void</span></td>
+<td><a href="#OnSelectTool"><span class="method">OnSelectTool</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">label</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
+<td><a href="#OnDeselectTool"><span class="method">OnDeselectTool</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
-<td><span class="void">void</span></td>
-<td><a href="#OnFileSelected"><span class="method">OnFileSelected</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">path</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#OnFileCleared"><span class="method">OnFileCleared</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#SetScale"><span class="method">SetScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#SetOpacity"><span class="method">SetOpacity</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#Center"><span class="method">Center</span></a> <span class="bracket">( )</span></td>
+<td><a href="../ToolPanel"><span class="type">ToolPanel</span></a></td>
+<td><a href="#CreateTool"><span class="method">CreateTool</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">label</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">icon</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">mod</span> = <span class="default">false</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Scale</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="property">Title</span></span>: <br>
 <span class="desc">
-Gets the Range representing the Trace Image scale. Call SetScale() to set instead.
+Gets the title displayed. Read only. Change title Label instead if you want to modify that text.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Opacity</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="property">ForceTool</span></span>: <br>
 <span class="desc">
-Gets the Range representing the Trace Image opacity. Call SetOpacity() to set instead.
+The name of the Tool that would be enabled if this specific toolbar was displayed.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">isDragging</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_label.html"><span class="type">Label</span></a> <span class="property">title</span></span>: <br>
 <span class="desc">
-Gets if the user is dragging. DO NOT MODIFY.
+Gets the UI element that displays the title.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_button.html"><span class="type">Button</span></a> <span class="property">backButton</span></span>: <br>
+<span class="desc">
+Gets the back button.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">panels</span></span>: <br>
+<span class="desc">
+Lookup table of <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html">String</a> key - <a href="../ToolPanel">ToolPanel</a> value pairs to look up a tool's associated ToolPanel.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></span>: <br>
+<li><span id="OnSelectTool"><span class="void">void</span> <a href="#OnSelectTool"><span class="method">OnSelectTool</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">label</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Save the Trace Image into the save file format and return it as a Dictionary. The param copy is only used by copy-pasting feature of Dungeondraft.
+Called when a tool is enabled so the toolbar would switch to the proper ToolPanel and update the title.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
+<li><span id="OnDeselectTool"><span class="void">void</span> <a href="#OnDeselectTool"><span class="method">OnDeselectTool</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Load a saved Trace Image data. Used by a saved map file to load.
+Called when a tool is disabled so the toolbar would hide its ToolPanel.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="OnFileSelected"><span class="void">void</span> <a href="#OnFileSelected"><span class="method">OnFileSelected</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">path</span> <span class="bracket">)</span></span>: <br>
+<li><span id="CreateTool"><a href="../ToolPanel"><span class="type">ToolPanel</span></a> <a href="#CreateTool"><span class="method">CreateTool</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">name</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">label</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">icon</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">mod</span> = <span class="default">false</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Called when a file a selected. Call be called set a new image file. Param property is not used.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="OnFileCleared"><span class="void">void</span> <a href="#OnFileCleared"><span class="method">OnFileCleared</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Called when a file is cleared. Call be called manually. Param property is not used.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="SetScale"><span class="void">void</span> <a href="#SetScale"><span class="method">SetScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Sets the Trace Image scale.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="SetOpacity"><span class="void">void</span> <a href="#SetOpacity"><span class="method">SetOpacity</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Sets the Trace Image opacity.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="Center"><span class="void">void</span> <a href="#Center"><span class="method">Center</span></a> <span class="bracket">( )</span></span>: <br>
-<span class="desc">
-Centers the image on the canvas.
+Creates a new tool to be added to the tool bar and return a new tool panel to modify. The real reason you came to this page.
 </span></li>
 </ul>
 

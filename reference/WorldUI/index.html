@@ -1,0 +1,2161 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../World/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>WorldUI - Dungeondraft Modding API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../wiki.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#worldui" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Dungeondraft Modding API" class="md-header__button md-logo" aria-label="Dungeondraft Modding API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dungeondraft Modding API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WorldUI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Dungeondraft Modding API" class="md-nav__button md-logo" aria-label="Dungeondraft Modding API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Dungeondraft Modding API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Scripting/" class="md-nav__link">
+        Scripting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Globals/" class="md-nav__link">
+        Globals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AssetCategories/" class="md-nav__link">
+        Asset Categories
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AssetInstance/" class="md-nav__link">
+        Asset Instance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/SerializingModData/" class="md-nav__link">
+        Serializing Mod Data
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ArcVector2/" class="md-nav__link">
+        ArcVector2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AssetPack/" class="md-nav__link">
+        AssetPack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BorderedMesh/" class="md-nav__link">
+        BorderedMesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Camera/" class="md-nav__link">
+        Camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaveBrush/" class="md-nav__link">
+        CaveBrush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CaveMesh/" class="md-nav__link">
+        CaveMesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ColorPalette/" class="md-nav__link">
+        ColorPalette
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Editor/" class="md-nav__link">
+        Editor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Environment/" class="md-nav__link">
+        Environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exporter/" class="md-nav__link">
+        Exporter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FloorShapeTool/" class="md-nav__link">
+        FloorShapeTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FloorShapes/" class="md-nav__link">
+        FloorShapes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FloorTileCamera/" class="md-nav__link">
+        FloorTileCamera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FloorTileMap/" class="md-nav__link">
+        FloorTileMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GridMenu/" class="md-nav__link">
+        GridMenu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Header/" class="md-nav__link">
+        Header
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Level/" class="md-nav__link">
+        Level
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LightTool/" class="md-nav__link">
+        LightTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lights/" class="md-nav__link">
+        Lights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MapSettings/" class="md-nav__link">
+        MapSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarchingSquaresMesh/" class="md-nav__link">
+        MarchingSquaresMesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MaterialBrush/" class="md-nav__link">
+        MaterialBrush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MaterialMesh/" class="md-nav__link">
+        MaterialMesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MeshBrush/" class="md-nav__link">
+        MeshBrush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ObjectLibraryPanel/" class="md-nav__link">
+        ObjectLibraryPanel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ObjectTool/" class="md-nav__link">
+        ObjectTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Objects/" class="md-nav__link">
+        Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PathLibraryPanel/" class="md-nav__link">
+        PathLibraryPanel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PathTool/" class="md-nav__link">
+        PathTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pathway/" class="md-nav__link">
+        Pathway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pathways/" class="md-nav__link">
+        Pathways
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PatternShape/" class="md-nav__link">
+        PatternShape
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PatternShapeTool/" class="md-nav__link">
+        PatternShapeTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PatternShapes/" class="md-nav__link">
+        PatternShapes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plexigon2D/" class="md-nav__link">
+        Plexigon2D
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Portal/" class="md-nav__link">
+        Portal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PortalTool/" class="md-nav__link">
+        PortalTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrefabTool/" class="md-nav__link">
+        PrefabTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreviewContainer/" class="md-nav__link">
+        PreviewContainer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prop/" class="md-nav__link">
+        Prop
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RangeSlider/" class="md-nav__link">
+        RangeSlider
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Roof/" class="md-nav__link">
+        Roof
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RoofTool/" class="md-nav__link">
+        RoofTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Roofs/" class="md-nav__link">
+        Roofs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScatterTool/" class="md-nav__link">
+        ScatterTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SelectTool/" class="md-nav__link">
+        SelectTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Selectable/" class="md-nav__link">
+        Selectable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShapeTool/" class="md-nav__link">
+        ShapeTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shapes/" class="md-nav__link">
+        Shapes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TagsPanel/" class="md-nav__link">
+        TagsPanel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Terrain/" class="md-nav__link">
+        Terrain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TerrainBrush/" class="md-nav__link">
+        TerrainBrush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Text/" class="md-nav__link">
+        Text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TextTool/" class="md-nav__link">
+        TextTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Texts/" class="md-nav__link">
+        Texts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tool/" class="md-nav__link">
+        Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ToolPanel/" class="md-nav__link">
+        ToolPanel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Toolbar/" class="md-nav__link">
+        Toolbar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Toolset/" class="md-nav__link">
+        Toolset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TraceImage/" class="md-nav__link">
+        TraceImage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UISegment/" class="md-nav__link">
+        UISegment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UITexture/" class="md-nav__link">
+        UITexture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wall/" class="md-nav__link">
+        Wall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WallTool/" class="md-nav__link">
+        WallTool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Walls/" class="md-nav__link">
+        Walls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WaterBrush/" class="md-nav__link">
+        WaterBrush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WaterMesh/" class="md-nav__link">
+        WaterMesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WaterPreMesh/" class="md-nav__link">
+        WaterPreMesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../World/" class="md-nav__link">
+        World
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WorldUI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        WorldUI
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    Property Descriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    Method Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="worldui">WorldUI</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_node2d.html">Node2D</a></p>
+<h2 id="description">Description</h2>
+<p>WorldUI is a singleton for Dungeondraft to display many of the UI elements for drawing like the cursor, line segments, and object previews.</p>
+<p>Accessed by <code>Global.WorldUI</code>.</p>
+<h2 id="properties">Properties</h2>
+<p>
+<table>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">cursorPrimaryColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">cursorSecondaryColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">cursorTertiaryColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">cursorQuaternaryColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">selectionBoxColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">selectionHighlightColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">selectionSelectColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_stylebox.html"><span class="type">StyleBox</span></a> </td>
+<td><span class="property">transformStyleBox</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_stylebox.html"><span class="type">StyleBox</span></a> </td>
+<td><span class="property">transformCornerStyleBox</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">CellSize</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">MousePosition</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsMouseMoving</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsInsideBounds</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">CursorTilePosition</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">CursorHalfTilePosition</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">SnappedPosition</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">HalfSnappedPosition</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">UseHalfSnap</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsSelectionEllipse</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> </td>
+<td><span class="property">Vertices</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">VerticesLoop</span> </td>
+</tr>
+<tr>
+<td><a href="../ArcVector2"><span class="type">ArcVector2[]</span></a> </td>
+<td><span class="property">Polyline</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsDrawingPolyline</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsMeasuring</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">RulerStart</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">RulerEnd</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">CanPolylineLoop</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">EditArcPoint</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">IndicateEditArcPoint</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">ArcSegments</span> </td>
+</tr>
+<tr>
+<td><a href="../UISegment"><span class="type">UISegment</span></a> </td>
+<td><span class="property">Segment</span> </td>
+</tr>
+<tr>
+<td><a href="../UITexture"><span class="type">UITexture</span></a> </td>
+<td><span class="property">Texture</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> </td>
+<td><span class="property">CursorColor</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> </td>
+<td><span class="property">CursorRadius</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> </td>
+<td><span class="property">CursorMode</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsActionInverted</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsCursorPositionFirstPoint</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">IsCursorPositionLastPoint</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
+<td><span class="property">ArePolyEndPointsTouching</span> </td>
+</tr>
+</table>
+</p>
+<h2 id="methods">Methods</h2>
+<p>
+<table>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#MarkPolyPoint"><span class="method">MarkPolyPoint</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#UpdateLastArcPoint"><span class="method">UpdateLastArcPoint</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#UndoPolyPoint"><span class="method">UndoPolyPoint</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#AddPolyPoint"><span class="method">AddPolyPoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ClearPolyline"><span class="method">ClearPolyline</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a></td>
+<td><a href="#GetArcPolyline"><span class="method">GetArcPolyline</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#DrawVertex"><span class="method">DrawVertex</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">radius</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#DrawCursorCircle"><span class="method">DrawCursorCircle</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">radius</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sides</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#DrawEllipse"><span class="method">DrawEllipse</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> <span class="param">bounds</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sides</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#DrawLineEx"><span class="method">DrawLineEx</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">line</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a></td>
+<td><a href="#GetSnappedPosition"><span class="method">GetSnappedPosition</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetSelectionBox"><span class="method">SetSelectionBox</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> <span class="param">box</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a></td>
+<td><a href="#GetSelectionBox"><span class="method">GetSelectionBox</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ClearSelectionBox"><span class="method">ClearSelectionBox</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetVertex"><span class="method">SetVertex</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">vertex</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a></td>
+<td><a href="#GetVertex"><span class="method">GetVertex</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ClearVertex"><span class="method">ClearVertex</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#SetGuidePosition"><span class="method">SetGuidePosition</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a></td>
+<td><a href="#GetGuidePosition"><span class="method">GetGuidePosition</span></a> <span class="bracket">( )</span></td>
+</tr>
+<tr>
+<td><span class="void">void</span></td>
+<td><a href="#ClearGuidePosition"><span class="method">ClearGuidePosition</span></a> <span class="bracket">( )</span></td>
+</tr>
+</table>
+</p>
+<h2 id="property-descriptions">Property Descriptions</h2>
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">cursorPrimaryColor</span></span>: <br>
+<span class="desc">
+Get or set the primary cursor color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">cursorSecondaryColor</span></span>: <br>
+<span class="desc">
+Get or set the secondary cursor color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">cursorTertiaryColor</span></span>: <br>
+<span class="desc">
+Get or set the tertiary cursor color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">cursorQuaternaryColor</span></span>: <br>
+<span class="desc">
+Get or set the quarternary cursor color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">selectionBoxColor</span></span>: <br>
+<span class="desc">
+Get or set the selection box normal color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">selectionHighlightColor</span></span>: <br>
+<span class="desc">
+Get or set the selection box highlight color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">selectionSelectColor</span></span>: <br>
+<span class="desc">
+Get or set the selection box select color.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_stylebox.html"><span class="type">StyleBox</span></a> <span class="property">transformStyleBox</span></span>: <br>
+<span class="desc">
+Gets or sets the StyleBox used to draw the transform selection box for the <a href="../SelectTool">SelectTool</a>.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_stylebox.html"><span class="type">StyleBox</span></a> <span class="property">transformCornerStyleBox</span></span>: <br>
+<span class="desc">
+Gets or sets the StyleBox used to draw the transform selection corner circles for the <a href="../SelectTool">SelectTool</a>.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">CellSize</span></span>: <br>
+<span class="desc">
+Gets the world unit size of each grid square.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">MousePosition</span></span>: <br>
+<span class="desc">
+Gets the mouse position in world space.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsMouseMoving</span></span>: <br>
+<span class="desc">
+Get if the mouse is moving.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsInsideBounds</span></span>: <br>
+<span class="desc">
+Get if the mouse is inside the canvas (Has a 512 unit padding because some tools can draw outside of bounds).
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">CursorTilePosition</span></span>: <br>
+<span class="desc">
+Gets the mouse grid snapped grid position. Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">CursorHalfTilePosition</span></span>: <br>
+<span class="desc">
+Gets the mouse half grid snapped grid position. Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">SnappedPosition</span></span>: <br>
+<span class="desc">
+Gets the mouse snapped position. Will return half snapped position if half snapping is enabled. If snapping is disabled by the user, will return the mouse position as normal. Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">HalfSnappedPosition</span></span>: <br>
+<span class="desc">
+Gets the mouse half snapped position or just the mouse position if snapping is disabled. Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">UseHalfSnap</span></span>: <br>
+<span class="desc">
+Get or set if half grid snapping is used. Normally set by the user preferences.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsSelectionEllipse</span></span>: <br>
+<span class="desc">
+Get or set if selection box should be drawn as an ellipse.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="property">Vertices</span></span>: <br>
+<span class="desc">
+Get or set if vertices drawn as a series of points.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">VerticesLoop</span></span>: <br>
+<span class="desc">
+Get or set if vertices should have a line closing the first and last points.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="../ArcVector2"><span class="type">ArcVector2[]</span></a> <span class="property">Polyline</span></span>: <br>
+<span class="desc"></li>
+</ul>
+<h2 id="_1"></span></h2>
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsDrawingPolyline</span></span>: <br>
+<span class="desc">
+Get or set if polyline should be drawn on screen.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsMeasuring</span></span>: <br>
+<span class="desc">
+Get or set if the ruler is enabled.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">RulerStart</span></span>: <br>
+<span class="desc">
+Get or set the start position of the ruler.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">RulerEnd</span></span>: <br>
+<span class="desc">
+Get or set the end position of the ruler.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">CanPolylineLoop</span></span>: <br>
+<span class="desc">
+Get or set if the polyline is allowed to loop.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">EditArcPoint</span></span>: <br>
+<span class="desc">
+Get or set if the user is editing the arc point instead of adding a new point.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">IndicateEditArcPoint</span></span>: <br>
+<span class="desc">
+Gets if the UI is showing to the user that Arc Points are being shown. Set automatically, not advised to set manually.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">ArcSegments</span></span>: <br>
+<span class="desc">
+Gets the number of segments generated in the last arc. Set automatically, not advised to set manually.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="../UISegment"><span class="type">UISegment</span></a> <span class="property">Segment</span></span>: <br>
+<span class="desc">
+Get or set the segment used to show edits of walls, paths, etc.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="../UITexture"><span class="type">UITexture</span></a> <span class="property">Texture</span></span>: <br>
+<span class="desc">
+Get or set the instance used to preview Portals.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="property">CursorColor</span></span>: <br>
+<span class="desc">
+Gets the color of the cusor. Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="property">CursorRadius</span></span>: <br>
+<span class="desc">
+Gets or sets the radius of the cursor.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="property">CursorMode</span></span>: <br>
+<span class="desc">
+Get or set the cursor mode. 0 = Off, 1 = Point, 2 = Tile, 3 = Vertex, 4 = Segment, 5 = Circle, 6 = Texture
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsActionInverted</span></span>: <br>
+<span class="desc">
+Gets or set if cursor or line should be drawn with the inverted color. Used by tools to inform the player they are erasing instead of adding an asset.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsCursorPositionFirstPoint</span></span>: <br>
+<span class="desc">
+Gets if the cursor is snapped to the same position as the first point of the polyline (closing the loop). Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">IsCursorPositionLastPoint</span></span>: <br>
+<span class="desc">
+Gets if the cursor is snapped to the same position as the last point of the polyline (mouse has not moved). Read only.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">ArePolyEndPointsTouching</span></span>: <br>
+<span class="desc">
+Gets if the last point of the polyine is very close or exactly the same as the first point. Read only.
+</span></li>
+</ul>
+<h2 id="method-descriptions">Method Descriptions</h2>
+<ul>
+<li><span id="MarkPolyPoint"><span class="void">void</span> <a href="#MarkPolyPoint"><span class="method">MarkPolyPoint</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Adds the mouse snapped position as a new point to the polyline.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="UpdateLastArcPoint"><span class="void">void</span> <a href="#UpdateLastArcPoint"><span class="method">UpdateLastArcPoint</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Adds the mouse snapped position as an arc point to the polyline. Arc points are used to curve the last segment added.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="UndoPolyPoint"><span class="void">void</span> <a href="#UndoPolyPoint"><span class="method">UndoPolyPoint</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Removes the last point of the polyline.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="AddPolyPoint"><span class="void">void</span> <a href="#AddPolyPoint"><span class="method">AddPolyPoint</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Add a new point to the polyline.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ClearPolyline"><span class="void">void</span> <a href="#ClearPolyline"><span class="method">ClearPolyline</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Erase all points of the polyline.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GetArcPolyline"><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <a href="#GetArcPolyline"><span class="method">GetArcPolyline</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Return the polyline as an array of Vector2 points, including any creating any curves created by arc points.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="DrawVertex"><span class="void">void</span> <a href="#DrawVertex"><span class="method">DrawVertex</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">radius</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Reference only. Used by _Draw() the draw vertices.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="DrawCursorCircle"><span class="void">void</span> <a href="#DrawCursorCircle"><span class="method">DrawCursorCircle</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">radius</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sides</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Reference only. Used by _Draw() the draw cursors.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="DrawEllipse"><span class="void">void</span> <a href="#DrawEllipse"><span class="method">DrawEllipse</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> <span class="param">bounds</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">sides</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Reference only. Used by _Draw() the draw ellipses.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="DrawLineEx"><span class="void">void</span> <a href="#DrawLineEx"><span class="method">DrawLineEx</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">line</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Reference only. Used by _Draw() the draw polylines.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GetSnappedPosition"><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <a href="#GetSnappedPosition"><span class="method">GetSnappedPosition</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Snap a position to the grid.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetSelectionBox"><span class="void">void</span> <a href="#SetSelectionBox"><span class="method">SetSelectionBox</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> <span class="param">box</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the selection box.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GetSelectionBox"><a href="https://docs.godotengine.org/en/3.4/classes/class_rect2.html"><span class="type">Rect2</span></a> <a href="#GetSelectionBox"><span class="method">GetSelectionBox</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Returns the selection box.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ClearSelectionBox"><span class="void">void</span> <a href="#ClearSelectionBox"><span class="method">ClearSelectionBox</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Clears the selection box.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetVertex"><span class="void">void</span> <a href="#SetVertex"><span class="method">SetVertex</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">vertex</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the vertex.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GetVertex"><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <a href="#GetVertex"><span class="method">GetVertex</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Returns the vertex.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ClearVertex"><span class="void">void</span> <a href="#ClearVertex"><span class="method">ClearVertex</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Clears the vertex.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="SetGuidePosition"><span class="void">void</span> <a href="#SetGuidePosition"><span class="method">SetGuidePosition</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="param">position</span> <span class="bracket">)</span></span>: <br>
+<span class="desc">
+Sets the guide position.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="GetGuidePosition"><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <a href="#GetGuidePosition"><span class="method">GetGuidePosition</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Returns the guide position.
+</span></li>
+</ul>
+<hr />
+<ul>
+<li><span id="ClearGuidePosition"><span class="void">void</span> <a href="#ClearGuidePosition"><span class="method">ClearGuidePosition</span></a> <span class="bracket">( )</span></span>: <br>
+<span class="desc">
+Clears the guide position.
+</span></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.path", "toc.integrate"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Toolset/">
+        <link rel="prev" href="../UISegment/">
       
       
-        <link rel="next" href="../UISegment/">
+        <link rel="next" href="../Wall/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>TraceImage - Dungeondraft Modding API</title>
+        <title>UITexture - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traceimage" class="md-skip">
+        <a href="#uitexture" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TraceImage
+              UITexture
             
           </span>
         </div>
@@ -1207,6 +1207,34 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../TraceImage/" class="md-nav__link">
+        TraceImage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UISegment/" class="md-nav__link">
+        UISegment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1219,12 +1247,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          TraceImage
+          UITexture
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        TraceImage
+        UITexture
       </a>
       
         
@@ -1257,22 +1285,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#property-descriptions" class="md-nav__link">
     Property Descriptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-descriptions" class="md-nav__link">
-    Method Descriptions
   </a>
   
 </li>
@@ -1281,34 +1295,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../UISegment/" class="md-nav__link">
-        UISegment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../UITexture/" class="md-nav__link">
-        UITexture
-      </a>
     </li>
   
 
@@ -1447,129 +1433,57 @@
                   
 
 
-<h1 id="traceimage">TraceImage</h1>
-<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="uitexture">UITexture</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
 <h2 id="description">Description</h2>
-<p>The tool used to edit the trace image.</p>
-<p>Accessed by <code>Global.Editor.Tools["TraceImage"]</code>.</p>
+<p>WorldUI helper class used to render the Portal previews.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">Scale</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> </td>
+<td><span class="property">Texture</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">Opacity</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> </td>
+<td><span class="property">Position</span> </td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_transform2d.html"><span class="type">Transform2D</span></a> </td>
+<td><span class="property">Transform</span> </td>
 </tr>
 <tr>
 <td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
-<td><span class="property">isDragging</span> </td>
-</tr>
-</table>
-</p>
-<h2 id="methods">Methods</h2>
-<p>
-<table>
-<tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a></td>
-<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#OnFileSelected"><span class="method">OnFileSelected</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">path</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#OnFileCleared"><span class="method">OnFileCleared</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#SetScale"><span class="method">SetScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#SetOpacity"><span class="method">SetOpacity</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#Center"><span class="method">Center</span></a> <span class="bracket">( )</span></td>
+<td><span class="property">Visible</span> </td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Scale</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="property">Texture</span></span>: <br>
 <span class="desc">
-Gets the Range representing the Trace Image scale. Call SetScale() to set instead.
+Gets or sets the width of the segment.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Opacity</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2</span></a> <span class="property">Position</span></span>: <br>
 <span class="desc">
-Gets the Range representing the Trace Image opacity. Call SetOpacity() to set instead.
+Gets or sets the end position.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">isDragging</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_transform2d.html"><span class="type">Transform2D</span></a> <span class="property">Transform</span></span>: <br>
 <span class="desc">
-Gets if the user is dragging. DO NOT MODIFY.
-</span></li>
-</ul>
-<h2 id="method-descriptions">Method Descriptions</h2>
-<ul>
-<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Save the Trace Image into the save file format and return it as a Dictionary. The param copy is only used by copy-pasting feature of Dungeondraft.
+Gets or sets the end position.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">Visible</span></span>: <br>
 <span class="desc">
-Load a saved Trace Image data. Used by a saved map file to load.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="OnFileSelected"><span class="void">void</span> <a href="#OnFileSelected"><span class="method">OnFileSelected</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">path</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Called when a file a selected. Call be called set a new image file. Param property is not used.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="OnFileCleared"><span class="void">void</span> <a href="#OnFileCleared"><span class="method">OnFileCleared</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Called when a file is cleared. Call be called manually. Param property is not used.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="SetScale"><span class="void">void</span> <a href="#SetScale"><span class="method">SetScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Sets the Trace Image scale.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="SetOpacity"><span class="void">void</span> <a href="#SetOpacity"><span class="method">SetOpacity</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
-<span class="desc">
-Sets the Trace Image opacity.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span id="Center"><span class="void">void</span> <a href="#Center"><span class="method">Center</span></a> <span class="bracket">( )</span></span>: <br>
-<span class="desc">
-Centers the image on the canvas.
+Gets or sets the end position.
 </span></li>
 </ul>
 

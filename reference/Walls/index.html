@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Toolset/">
+        <link rel="prev" href="../WallTool/">
       
       
-        <link rel="next" href="../UISegment/">
+        <link rel="next" href="../WaterBrush/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>TraceImage - Dungeondraft Modding API</title>
+        <title>Walls - Dungeondraft Modding API</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traceimage" class="md-skip">
+        <a href="#walls" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TraceImage
+              Walls
             
           </span>
         </div>
@@ -1207,80 +1207,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TraceImage
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../TraceImage/" class="md-nav__link">
         TraceImage
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    Methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#property-descriptions" class="md-nav__link">
-    Property Descriptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-descriptions" class="md-nav__link">
-    Method Descriptions
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1346,11 +1277,80 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Walls/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Walls
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Walls
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#property-descriptions" class="md-nav__link">
+    Property Descriptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-descriptions" class="md-nav__link">
+    Method Descriptions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1447,25 +1447,20 @@
                   
 
 
-<h1 id="traceimage">TraceImage</h1>
-<p><strong>Extends:</strong> <a href="../Tool">Tool</a> &lt; <a href="https://docs.godotengine.org/en/3.4/classes/class_object.html">Object</a></p>
+<h1 id="walls">Walls</h1>
+<p><strong>Extends:</strong> <a href="https://docs.godotengine.org/en/3.4/classes/class_node2d.html">Node2D</a></p>
 <h2 id="description">Description</h2>
-<p>The tool used to edit the trace image.</p>
-<p>Accessed by <code>Global.Editor.Tools["TraceImage"]</code>.</p>
+<p>The parent class holding all <a href="../Wall">Wall</a> of a <a href="../Level">Level</a>.</p>
 <h2 id="properties">Properties</h2>
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">Scale</span> </td>
+<td><a href="../Level"><span class="type">Level</span></a> </td>
+<td><span class="property">Level</span> </td>
 </tr>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> </td>
-<td><span class="property">Opacity</span> </td>
-</tr>
-<tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> </td>
-<td><span class="property">isDragging</span> </td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> </td>
+<td><span class="property">CloningRemap</span> </td>
 </tr>
 </table>
 </p>
@@ -1473,103 +1468,96 @@
 <p>
 <table>
 <tr>
-<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a></td>
-<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></td>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary[]</span></a></td>
+<td><a href="#Save"><span class="method">Save</span></a> <span class="bracket">( )</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
+<td><a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary[]</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#OnFileSelected"><span class="method">OnFileSelected</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">path</span> <span class="bracket">)</span></td>
+<td><a href="#Resize"><span class="method">Resize</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">x</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">y</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">w</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">h</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="../Wall"><span class="type">Wall</span></a></td>
+<td><a href="#AddWall"><span class="method">AddWall</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">points</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="param">texture</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">loop</span> = <span class="default">true</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">shadow</span> = <span class="default">true</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">type</span> = <span class="default">0</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">joint</span> = <span class="default">1</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">normalizeUV</span> = <span class="default">true</span> <span class="bracket">)</span></td>
+</tr>
+<tr>
+<td><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a></td>
+<td><a href="#TryMerge"><span class="method">TryMerge</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">points</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="param">texture</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#OnFileCleared"><span class="method">OnFileCleared</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span> <span class="bracket">)</span></td>
+<td><a href="#MoveToBack"><span class="method">MoveToBack</span></a> <span class="bracket">(</span> <a href="../Wall"><span class="type">Wall</span></a> <span class="param">wall</span> <span class="bracket">)</span></td>
 </tr>
 <tr>
 <td><span class="void">void</span></td>
-<td><a href="#SetScale"><span class="method">SetScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#SetOpacity"><span class="method">SetOpacity</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></td>
-</tr>
-<tr>
-<td><span class="void">void</span></td>
-<td><a href="#Center"><span class="method">Center</span></a> <span class="bracket">( )</span></td>
+<td><a href="#LoadWall"><span class="method">LoadWall</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></td>
 </tr>
 </table>
 </p>
 <h2 id="property-descriptions">Property Descriptions</h2>
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Scale</span></span>: <br>
+<li><span><a href="../Level"><span class="type">Level</span></a> <span class="property">Level</span></span>: <br>
 <span class="desc">
-Gets the Range representing the Trace Image scale. Call SetScale() to set instead.
+The Level in which this class instance resides.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_range.html"><span class="type">Range</span></a> <span class="property">Opacity</span></span>: <br>
+<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="property">CloningRemap</span></span>: <br>
 <span class="desc">
-Gets the Range representing the Trace Image opacity. Call SetOpacity() to set instead.
-</span></li>
-</ul>
-<hr />
-<ul>
-<li><span><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="property">isDragging</span></span>: <br>
-<span class="desc">
-Gets if the user is dragging. DO NOT MODIFY.
+A lookup table of int key - int value pairs for mapping the old wall id to new unique ones when a Level is cloned.
 </span></li>
 </ul>
 <h2 id="method-descriptions">Method Descriptions</h2>
 <ul>
-<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">copy</span> = <span class="default">false</span> <span class="bracket">)</span></span>: <br>
+<li><span id="Save"><a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary[]</span></a> <a href="#Save"><span class="method">Save</span></a> <span class="bracket">( )</span></span>: <br>
 <span class="desc">
-Save the Trace Image into the save file format and return it as a Dictionary. The param copy is only used by copy-pasting feature of Dungeondraft.
+Save all walls in this level as a list into the save file format and return it as an Array.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
+<li><span id="Load"><span class="void">void</span> <a href="#Load"><span class="method">Load</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary[]</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Load a saved Trace Image data. Used by a saved map file to load.
+Load a list of saved wall data. Used by a saved map file to load existing walls.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="OnFileSelected"><span class="void">void</span> <a href="#OnFileSelected"><span class="method">OnFileSelected</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">path</span> <span class="bracket">)</span></span>: <br>
+<li><span id="Resize"><span class="void">void</span> <a href="#Resize"><span class="method">Resize</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">x</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">y</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">w</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">h</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Called when a file a selected. Call be called set a new image file. Param property is not used.
+Called automatically when the canvas is resized. DO NOT CALL DIRECTLY. FOR REFERENCE ONLY.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="OnFileCleared"><span class="void">void</span> <a href="#OnFileCleared"><span class="method">OnFileCleared</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_string.html"><span class="type">String</span></a> <span class="param">property</span> <span class="bracket">)</span></span>: <br>
+<li><span id="AddWall"><a href="../Wall"><span class="type">Wall</span></a> <a href="#AddWall"><span class="method">AddWall</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">points</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="param">texture</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_color.html"><span class="type">Color</span></a> <span class="param">color</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">loop</span> = <span class="default">true</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">shadow</span> = <span class="default">true</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">type</span> = <span class="default">0</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_int.html"><span class="type">int</span></a> <span class="param">joint</span> = <span class="default">1</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <span class="param">normalizeUV</span> = <span class="default">true</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Called when a file is cleared. Call be called manually. Param property is not used.
+Create a new Wall and add to self as a child. The parameter type determines the wall type. Valid options are: 0 = Auto, 1 = Manual, 2 = Cave. The parameter joint determines the joint type. Valid options are: 0 = Sharp, 1 = Bevel, 2 = Round. The parameter normalize UV will make the software recalculate a wall's UV so that it is more uniform.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="SetScale"><span class="void">void</span> <a href="#SetScale"><span class="method">SetScale</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<li><span id="TryMerge"><a href="https://docs.godotengine.org/en/3.4/classes/class_bool.html"><span class="type">bool</span></a> <a href="#TryMerge"><span class="method">TryMerge</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_vector2.html"><span class="type">Vector2[]</span></a> <span class="param">points</span>, <a href="https://docs.godotengine.org/en/3.4/classes/class_texture.html"><span class="type">Texture</span></a> <span class="param">texture</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Sets the Trace Image scale.
+Try to merge a set of points as part of an existing wall instead of creating a new Wall. Returns true if it succeeds in doing so.
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="SetOpacity"><span class="void">void</span> <a href="#SetOpacity"><span class="method">SetOpacity</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_float.html"><span class="type">float</span></a> <span class="param">value</span> <span class="bracket">)</span></span>: <br>
+<li><span id="MoveToBack"><span class="void">void</span> <a href="#MoveToBack"><span class="method">MoveToBack</span></a> <span class="bracket">(</span> <a href="../Wall"><span class="type">Wall</span></a> <span class="param">wall</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Sets the Trace Image opacity.
+Move a Wall to the front of the children list in the SceneTree so that it is rendered last. (Back as in background).
 </span></li>
 </ul>
 <hr />
 <ul>
-<li><span id="Center"><span class="void">void</span> <a href="#Center"><span class="method">Center</span></a> <span class="bracket">( )</span></span>: <br>
+<li><span id="LoadWall"><span class="void">void</span> <a href="#LoadWall"><span class="method">LoadWall</span></a> <span class="bracket">(</span> <a href="https://docs.godotengine.org/en/3.4/classes/class_dictionary.html"><span class="type">Dictionary</span></a> <span class="param">data</span> <span class="bracket">)</span></span>: <br>
 <span class="desc">
-Centers the image on the canvas.
+Load a single Wall into this level. Called by Load() as it loads all the walls.
 </span></li>
 </ul>
 
